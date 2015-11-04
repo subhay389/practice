@@ -1,0 +1,22 @@
+def reverse(string):
+2	    word = ""
+3	    sentence = ""
+4	    dot = False
+5	    if string[-1] == '.':
+6	        string = string[0:-1]
+7	        dot = True
+8	    for i in xrange(len(string)):
+9	        if string[i] != ' ':
+10	            word = word + string[i]
+11	        else: 
+12	            sentence =  word + sentence
+13	            word = ""
+14	            if i != len(string)-1: 
+15	                sentence = " " + sentence
+16	    sentence =  word + sentence            
+17	    if dot: 
+18	        sentence += "."
+19	    return sentence    
+20	    
+21	    
+22	print reverse("subhay is a good boy.")
